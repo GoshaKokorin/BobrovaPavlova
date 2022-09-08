@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 import os
-import config
+from bp import config
 from pathlib import Path
 from os.path import join, dirname
 
