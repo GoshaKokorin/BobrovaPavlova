@@ -11,23 +11,21 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 import os
+import config
 from pathlib import Path
 from os.path import join, dirname
-from dotenv import load_dotenv
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-dotenv_path = join(dirname(__file__), '../.env')
-load_dotenv(dotenv_path)
-
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = config.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOSTS")]
+ALLOWED_HOSTS = [config.ALLOWED_HOSTS]
 
 # Application definition
 
@@ -77,11 +75,11 @@ WSGI_APPLICATION = 'bp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get("NAME"),
-        'USER': os.environ.get("USER"),
-        'PASSWORD': os.environ.get("PASSWORD"),
-        'HOST': os.environ.get("HOST"),
-        'PORT': os.environ.get("PORT"),
+        'NAME': config.NAME,
+        'USER': config.USER,
+        'PASSWORD': config.PASSWORD,
+        'HOST': config.HOST,
+        'PORT': config.PORT,
     }
 }
 

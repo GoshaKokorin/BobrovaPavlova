@@ -53,4 +53,5 @@ venv
 env
 env3
 .env
+bp/config.py
 
