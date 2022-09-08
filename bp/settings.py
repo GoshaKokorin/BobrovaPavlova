@@ -77,7 +77,7 @@ DATABASES = {
         'NAME': 'u1690320_bobrova_pavlova',
         'USER': 'u1690320_bobrova',
         'PASSWORD': 'bobrova_pavlova',
-        'HOST': 'https://server238.hosting.reg.ru',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
