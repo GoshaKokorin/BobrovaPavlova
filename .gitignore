@@ -54,3 +54,4 @@ env
 env3
 .env
 bp/config.py
+bp/passenger_wsgi.py
