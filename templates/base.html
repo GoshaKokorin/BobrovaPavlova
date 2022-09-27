@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/main.min.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/style-secondary.css">
 
+
 </head>
 <body>
     <header class="header ">
@@ -91,13 +92,6 @@
     </header>
 
     {% block body %}
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-info" role="alert">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
         {% block content %}
         {% endblock %}
     {% endblock %}
@@ -126,6 +120,7 @@
         <circle class="cursor__inner" cx="12.5" cy="12.5" r="6.25"></circle>
     </svg>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/styles.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/styles.css">
     <script defer src="{{ STATIC_URL }}js/demo.9ce5c2ea.js"></script>
     <script defer src="{{ STATIC_URL }}js/demo4.e22d7780.js"></script>
     <script defer src="{{ STATIC_URL }}js/wow.min.js"></script>

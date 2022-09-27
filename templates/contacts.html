@@ -19,21 +19,21 @@
   <!-- canonical -->
   <link rel="canonical" href="https://site-url.ru/">
   <!-- favicon -->
-  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/manifest.json">
+  <link rel="shortcut icon" href="{{ STATIC_URL }}favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ STATIC_URL }}favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ STATIC_URL }}favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href={{ STATIC_URL }}"favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ STATIC_URL }}favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ STATIC_URL }}favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ STATIC_URL }}favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ STATIC_URL }}favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ STATIC_URL }}favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ STATIC_URL }}favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="f{{ STATIC_URL }}avicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ STATIC_URL }}favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ STATIC_URL }}favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ STATIC_URL }}favicon/favicon-16x16.png">
+  <link rel="manifest" href="{{ STATIC_URL }}favicon/manifest.json">
   <!-- app icon -->
   <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
   <meta name="msapplication-TileColor" content="#ffffff">
@@ -45,12 +45,12 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="format-detection" content="address=no">
   <!-- preload fonts -->
-  <link rel="preload" href="fonts/GothamBook/GothamBook.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/GothamMedium/GothamMedium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/SFUIDisplayBold/SFUIDisplayBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ STATIC_URL }}fonts/GothamBook/GothamBook.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ STATIC_URL }}fonts/GothamMedium/GothamMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ STATIC_URL }}fonts/SFUIDisplayBold/SFUIDisplayBold.woff2" as="font" type="font/woff2" crossorigin>
   <!-- critical styles -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/style-secondary.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/style-secondary.css">
 </head>
 <body>
   <!-- browser-sync start --server --files "css/*.css" -->
@@ -131,8 +131,8 @@
                         </div>
                     </div>
                     <div class="type-block__content__right-side">
-                        <div class="type-project">
-                          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa2d24ab1aa2ec66733939c82e028656e55c6a7b1e85ef42cb1346ff2292556f1&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
+                        <div class="type-project contacts__map-container">
+                          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa2d24ab1aa2ec66733939c82e028656e55c6a7b1e85ef42cb1346ff2292556f1&amp;width=100%25&amp;height=620&amp;lang=ru_RU&amp;scroll=true"></script>
                         </div>
                     </div>
                 </div>
@@ -217,10 +217,10 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <!-- styles -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/styles.css">
   <!-- js -->
-  <script defer src="js/demo.9ce5c2ea.js"></script>
-  <script defer src="js/demo4.e22d7780.js"></script>
-  <script defer src="js/common.js"></script>
+  <script defer src="{{ STATIC_URL }}js/demo.9ce5c2ea.js"></script>
+  <script defer src="{{ STATIC_URL }}js/demo4.e22d7780.js"></script>
+  <script defer src="{{ STATIC_URL }}js/common.min.js"></script>
 </body>
 </html>
