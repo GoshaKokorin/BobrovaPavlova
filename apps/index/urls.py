@@ -12,5 +12,5 @@ urlpatterns = [
     path('architecture/', ArhView.as_view(), name='architecture'),
     path('residential/', JilView.as_view(), name='residential'),
     path('commercial/', KomView.as_view(), name='commercial'),
-    path('project/', KomView.as_view(), name='project'),
+    path('project/', ProjectView.as_view(), name='project'),
 ]
