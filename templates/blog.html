@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- main content -->
+    <main class="main-page scroll-active-page fullpage-slider">
+        <div class="fullpage-slider__wrapper blog-wrapper">
+            <section class="js-slider-item blog__type-section type-block architecture-type lazyload blog-mob__no-p blog-first-section">
+                <div class="container">
+                    <div class="type-block__content" data-swiper-animation="type_block">
+                        <div class="type-block__content__left-side">
+                            <h2 class="type-block__title section-title" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">Блог</h2>
+                            <div class="type-block__descr section-descr" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
+                                <p>Пишем простым и понятным языком о современной архитектуре</p>
+                            </div>
+                        </div>
+                        <div class="type-block__content__right-side">
+                            <div class="type-project" data-swiper-animation="type_project_1">
+                                <a href="post_page_1.html" class="item-link"></a>
+                                <div class="image-block blog__h">
+                                    <img src="{{ STATIC_URL }}images/common/blog/blog-1.jpg" alt="blog-image" class="blog__h item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <h3 class="slide-title blog-title">Обсуждение проекта</h3>
+                                    <div class="slide-descr blog-descr">
+                                        <p>Познакомимся с вами и вашим проектом, углубимся в задачу и обсудим, как ее реализовать. Также выделим менеджера проекта, ведущего архитектора и ассистента, настроим удобный для вас способ коммуникации.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="js-slider-item blog__type-section type-block living-type blog-type-block_no-pb blog-second-section">
+                <div class="container">
+                    <div class="blog__type-block__content type-block__content" data-swiper-animation="type_block">
+                        <div class="type-block__content__right-side blog__mob-mb">
+                            <div class="type-project" data-swiper-animation="type_project_1">
+                                <a href="post_page_1.html" class="item-link"></a>
+                                <div class="image-block blog__h">
+                                    <img src="{{ STATIC_URL }}images/common/blog/blog-2.jpg" alt="blog-image" class="blog__h item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <h3 class="slide-title blog-title">Обсуждение проекта</h3>
+                                    <div class="slide-descr blog-descr">
+                                        <p>Познакомимся с вами и вашим проектом, углубимся в задачу и обсудим, как ее реализовать. Также выделим менеджера проекта, ведущего архитектора и ассистента, настроим удобный для вас способ коммуникации.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type-block__content__left-side blog__right-small-container">
+                            <div class="type-project blog__small-news-container" data-swiper-animation="type_project_1">
+                                <a href="#" class="item-link"></a>
+                                <div class="image-block blog__small-img-container">
+                                    <img src="{{ STATIC_URL }}images/common/blog/blog-3.jpg" alt="blog-image" class="blog__image item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <h3 class="project-name blog__small-title">Обсуждение проекта</h3>
+                                </div>
+                            </div>
+                            <div class="type-project blog__small-news-container" data-swiper-animation="type_project_2">
+                                <a href="#" class="item-link"></a>
+                                <div class="image-block blog__small-img-container">
+                                    <img src="{{ STATIC_URL }}images/common/blog/blog-4.jpg" alt="blog-image" class="blog__image item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <h3 class="project-name blog__small-title">Обсуждение проекта</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="js-slider-item blog__type-section type-block architecture-type lazyload blog-mob__no-p blog-type-block_no-pt blog-type-block_no-pb blog-third-section">
+                <div class="container">
+                    <div class="type-block__content" data-swiper-animation="type_block">
+                        <div class="type-block__content__left-side blog__left-no-padding">
+                            <div class="type-project blog__small-news-container" data-swiper-animation="type_project_1">
+                                <a href="#" class="item-link"></a>
+                                <div class="image-block blog__small-img-container blog__h-25">
+                                    <img src="{{ STATIC_URL }}images/common/blog/blog-5.jpg" alt="blog-image" class="blog__h-25 blog__image item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <h3 class="project-name blog__small-title">Обсуждение проекта</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type-block__content__right-side">
+                            <div class="type-project" data-swiper-animation="type_project_1">
+                                <a href="post_page_1.html" class="item-link"></a>
+                                <div class="type-project blog__small-news-container" data-swiper-animation="type_project_1">
+                                    <a href="#" class="item-link"></a>
+                                    <div class="image-block blog__small-img-container">
+                                        <img src="{{ STATIC_URL }}images/common/blog/blog-6.jpg" alt="blog-image" class="blog__h-25 item-image">
+                                    </div>
+                                    <div class="descr-block">
+                                        <h3 class="project-name blog__small-title blog__mob-fw">Обсуждение проекта</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="js-slider-item blog__type-section type-block living-type blog-type-block_no-pt blog-type-block_no-pb blog-second-section">
+                <div class="container">
+                    <div class="blog__type-block__content type-block__content" data-swiper-animation="type_block">
+                        <div class="type-block__content__right-side blog__mob-mb">
+                            <div class="type-project" data-swiper-animation="type_project_1">
+                                <a href="post_page_1.html" class="item-link"></a>
+                                <div class="image-block blog__h">
+                                    <img src="{{ STATIC_URL }}images/common/blog/blog-7.jpg" alt="blog-image" class="blog__h item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <h3 class="slide-title blog-title">Обсуждение проекта</h3>
+                                    <div class="slide-descr blog-descr">
+                                        <p>Познакомимся с вами и вашим проектом, углубимся в задачу и обсудим, как ее реализовать. Также выделим менеджера проекта, ведущего архитектора и ассистента, настроим удобный для вас способ коммуникации.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type-block__content__left-side blog__right-small-container">
+                            <div class="type-project blog__small-news-container" data-swiper-animation="type_project_1">
+                                <a href="#" class="item-link"></a>
+                                <div class="image-block blog__small-img-container">
+                                    <img src="{{ STATIC_URL }}images/common/blog/blog-8.jpg" alt="blog-image" class="blog__image item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <h3 class="project-name blog__small-title">Обсуждение проекта</h3>
+                                </div>
+                            </div>
+                            <div class="type-project blog__small-news-container" data-swiper-animation="type_project_2">
+                                <a href="#" class="item-link"></a>
+                                <div class="image-block blog__small-img-container">
+                                    <img src="{{ STATIC_URL }}images/common/blog/blog-9.jpg" alt="blog-image" class="blog__image item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <h3 class="project-name blog__small-title">Обсуждение проекта</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="js-slider-item blog__type-section type-block architecture-type lazyload blog-mob__no-mt blog-type-block_no-pt blog-type-block_no-pb blog-third-section">
+                <div class="container">
+                    <div class="type-block__content" data-swiper-animation="type_block">
+                        <div class="type-block__content__left-side blog__left-no-padding">
+                            <div class="type-project blog__small-news-container" data-swiper-animation="type_project_1">
+                                <a href="#" class="item-link"></a>
+                                <div class="image-block blog__small-img-container blog__h-25">
+                                    <img src="{{ STATIC_URL }}images/common/blog/blog-10.jpg" alt="blog-image" class="blog__h-25 blog__image item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <h3 class="project-name blog__small-title">Обсуждение проекта</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type-block__content__right-side">
+                            <div class="type-project" data-swiper-animation="type_project_1">
+                                <a href="post_page_1.html" class="item-link"></a>
+                                <div class="type-project blog__small-news-container" data-swiper-animation="type_project_1">
+                                    <a href="#" class="item-link"></a>
+                                    <div class="image-block blog__small-img-container">
+                                        <img src="{{ STATIC_URL }}images/common/blog/blog-11.jpg" alt="blog-image" class="blog__h-25 item-image">
+                                    </div>
+                                    <div class="descr-block">
+                                        <h3 class="project-name blog__small-title blog__mob-fw">Обсуждение проекта</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="fullpage-slider__scroll"></div>
+    </main>
+    <!-- main end content -->
+{% endblock %}

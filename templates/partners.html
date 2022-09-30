@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main class="main-page">
+    <div class="container">
+        <section class="type-block contacts-page-type delivery-page-type lazyload">
+            <div style="width: 100%;">
+                <div class="type-block__content delivery__type-block-content-container" data-swiper-animation="type_block">
+                    <div class="delivery__type-block__content__left-side type-block__content__left-side">
+                        <h2 class="type-block__title section-title" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">Поставщикам</h2>
+                        <div class="type-block__descr section-descr contacts-descr delivery-descr" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
+                            <p>
+                                Если вы занимаетесь поставками материалов и ищете новых партнеров — свяжитесь с нами, мы рады полезному сотрудничеству. Вы можете позвонить нам или отправить сообщение по электронной почте, вам помогут Алена или Алексей
+                            </p>
+                        </div>
+                        <div class="type-block__btn-row contacts__link-more" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
+                            <a href="javascript:void(0);" data-micromodal-trigger="modal_backcall" class="more-link btn-style button contacts-btn-style">
+                                <div class="button__filler"></div>
+                                <span class="button__text">
+                                <span class="button__text-inner">Оставить заявку</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="delivery__type-block delivery__type-block__content__right-side type-block__content__right-side">
+                        <div class="delivery__type-block-content">
+                            <div class="delivery__type-project">
+                                <div class="image-block">
+                                    <img src="{{ STATIC_URL }}images/common/delivery/delivery-1.jpg" alt="human-image" class="item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <p class="delivery-name">
+                                        Сизова Алена
+                                    </p>
+                                    <p class="delivery-position">
+                                        Менеджер по комплектации
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="delivery__type-project">
+                                <div class="image-block">
+                                    <img src="{{ STATIC_URL }}images/common/delivery/delivery-2.jpg" alt="human-image" class="item-image">
+                                </div>
+                                <div class="descr-block">
+                                    <p class="delivery-name">
+                                        Березкин Алексей
+                                    </p>
+                                    <p class="delivery-position">
+                                        Менеджер по комплектации
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__link-container delivery__link-container flex">
+                            <a class="contacts__link mail-link" href="mailto:info@partners-bureau.com">
+                                info@partners-bureau.com
+                            </a>
+                            <a class="contacts__link phone-link" href="tel:+78126710371">
+                                +7 812 671 0371
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="fullpage-slider__scroll"></div>
+    </main>
+{% endblock %}
