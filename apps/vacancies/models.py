@@ -3,7 +3,6 @@ from django.db import models
 
 class Vacancies(models.Model):
     title = models.CharField('Вакансия', max_length=255, blank=False)
-    slug = models.SlugField('slug', max_length=255, blank=False, unique=True)
     type_employment = models.CharField('Тип занятости', max_length=255, blank=True, null=True)
     city = models.CharField('Город', max_length=255, blank=True, null=True)
     description = models.TextField('Описание', null=True, blank=True)
