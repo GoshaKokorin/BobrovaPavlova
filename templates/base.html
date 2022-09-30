@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/main.min.css">
 
     <link rel="stylesheet" href="{{ STATIC_URL }}css/delivery.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/post_page.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/style-secondary.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/style-job.css">
     <script src="{{ STATIC_URL }}js/jquery-3.6.0.js"></script>
@@ -106,7 +107,7 @@
             <div class="footer__content">
                 <div class="footer__content__left-side">
                     <address>Санкт-Петербург, <br> Пискаревский проспект, дом 1</address>
-                    <a href="#" class="download-link">Скачать прайс-лист</a>
+                    <a href="{{ STATIC_URL }}images/price.pdf" class="download-link" download>Скачать прайс-лист</a>
                 </div>
                 <div class="footer__content__right-side">
                     <a href="tel:+78126710371" class="phone-link">+7 812 671 03 71</a>

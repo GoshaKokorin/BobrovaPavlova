@@ -5,4 +5,4 @@ from .models import IndexForm
 class IndexForms(ModelForm):
     class Meta:
         model = IndexForm
-        fields = '__all__'
+        fields = ['name', 'phone']
