@@ -1,34 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from apps.index.forms import IndexForms
-
-
-# class IndexView(TemplateView):
-#     template_name = "index.html"
-#
-#     if request.method == 'POST':
-#         form = ProfileForm(request.POST, instance=profile)
-#         if form.is_valid():
-#             form.save()
-#
-#             context['first_name'] = form['first_name'].value()
-#             context['last_name'] = form['last_name'].value()
-#             context['email'] = form['email'].value()
-#             context['company'] = form['company'].value()
-#             context['address'] = form['address'].value()
-#             context['phone'] = form['phone'].value()
-#             context['city'] = form['city'].value()
-#             context['zip'] = form['zip'].value()
-#             context['country'] = form['country'].value()
-#
-#             context['form'] = ProfileForm(instance=profile)
-#             return render(request, 'wineservice/checkout/checkout-step-2.html', context)
-#
-#     context['form'] = ProfileForm(instance=profile)
-#
-#     def get_context_data(self, **kwargs):
-#         context = {}
-#         return context
+from apps.index.forms import IndexForms, PartnersForms
 
 
 def index(request):
@@ -51,17 +23,49 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-class ContactsView(TemplateView):
-    template_name = "contacts.html"
+def contact(request):
+    context = {}
 
-    def get_context_data(self, **kwargs):
-        context = {}
-        return context
+    if request.method == 'POST':
+        form = IndexForms(request.POST)
+        if form.is_valid():
+            form.save()
+            context['name'] = form['name'].value()
+            context['phone'] = form['phone'].value()
+            context['form'] = IndexForms()
+    else:
+        context['form'] = IndexForms()
+    return render(request, 'contacts.html', context)
 
 
-class PartnersView(TemplateView):
-    template_name = "partners.html"
+# class ContactsView(TemplateView):
+#     template_name = "contacts.html"
+#
+#     def get_context_data(self, **kwargs):
+#         context = {}
+#         return context
 
-    def get_context_data(self, **kwargs):
-        context = {}
-        return context
+
+def partners(request):
+    context = {}
+
+    if request.method == 'POST':
+        form = PartnersForms(request.POST)
+        if form.is_valid():
+            form.save()
+            context['name'] = form['name'].value()
+            context['phone'] = form['phone'].value()
+            context['email'] = form['email'].value()
+            context['url'] = form['url'].value()
+            context['form'] = PartnersForms()
+    else:
+        context['form'] = PartnersForms()
+    return render(request, 'partners.html', context)
+
+
+# class PartnersView(TemplateView):
+#     template_name = "partners.html"
+#
+#     def get_context_data(self, **kwargs):
+#         context = {}
+#         return context

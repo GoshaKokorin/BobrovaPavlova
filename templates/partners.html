@@ -79,7 +79,8 @@
                     <button class="modal__close" aria-label="Закрыть" data-micromodal-close><i class="icon icon-close"></i></button>
                 </header>
                     <main class="modal__content">
-                    <form id="backcall_form" action="" data-modal="modal_application" data-success="application_ok" class="backcall-form">
+                    <form id="backcall_form" action="" data-modal="modal_application" data-success="application_ok" class="backcall-form" method="post">
+                        {% csrf_token %}
                         <div class="input-group">
                             <input type="text" class="input-style" name="name" placeholder="Имя*">
                         </div>

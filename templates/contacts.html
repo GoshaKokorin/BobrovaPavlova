@@ -69,7 +69,8 @@
                     </header>
                     <main class="modal__content">
                         <form id="backcall_form" action="" data-modal="modal_backcall" data-success="backcall_ok"
-                              class="backcall-form">
+                              class="backcall-form" method="POST">
+                            {% csrf_token %}
                             <div class="input-group">
                                 <input type="text" class="input-style" name="name" placeholder="Имя*">
                             </div>
