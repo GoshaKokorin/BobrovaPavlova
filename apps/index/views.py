@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from apps.index.forms import IndexForms, PartnersForms
@@ -14,7 +15,7 @@ def index(request):
             context['phone'] = form['phone'].value()
             context['form'] = IndexForms()
             # name = form.cleaned_data['name']
-            # return JsonResponse({"name": name}, status=200)
+            # return render(request, 'about.html', context)
         else:
             errors = form.errors.as_json()
             # return JsonResponse({"errors": errors}, status=400)
