@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% for item in blog %}
     <!-- main content -->
     <main class="main-page post-page-scroll-active fullpage-slider post-page-main-section-back">
         <div class="fullpage-slider__wrapper">
@@ -8,9 +9,9 @@
                 <div class="container">
                     <div class="post-page-type-block__content type-block__content type-block__content" data-swiper-animation="type_block">
                         <div class="type-block__content__left-side">
-                            <h2 class="post-page-type-block__title type-block__title section-title" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">Обсуждение проекта</h2>
+                            <h2 class="post-page-type-block__title type-block__title section-title" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">{{ item.title }}</h2>
                             <div class="type-block__descr section-descr" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
-                                <p>Познакомимся с вами и вашим проектом, углубимся в задачу и обсудим, как ее реализовать. Также выделим менеджера</p>
+                                <p>{{ item.description }}</p>
                             </div>
                         </div>
                         <div class="post-pagetype-block__content__right-side type-block__content__right-side"></div>
@@ -98,5 +99,6 @@
         </div>
         <div class="fullpage-slider__scroll"></div>
     </main>
+    {% endfor %}
     <!-- main end content -->
 {% endblock %}

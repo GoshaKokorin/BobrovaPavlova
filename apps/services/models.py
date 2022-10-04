@@ -29,7 +29,6 @@ class Projects(models.Model):
     title3 = models.CharField('Приписка к проекту', max_length=255, null=True)
     title4 = models.CharField('Заголовок 2', max_length=255, null=True)
     title5 = models.CharField('Заголовок 2', max_length=255, null=True)
-
     image1 = models.ImageField('Главная картинка', upload_to='project/', default='project/no_image.jpg',
                                null=True)
     image2 = models.ImageField('Главная картинка', upload_to='project/', default='project/no_image.jpg',

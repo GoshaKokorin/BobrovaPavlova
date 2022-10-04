@@ -39,14 +39,6 @@ def contact(request):
     return render(request, 'contacts.html', context)
 
 
-# class ContactsView(TemplateView):
-#     template_name = "contacts.html"
-#
-#     def get_context_data(self, **kwargs):
-#         context = {}
-#         return context
-
-
 def partners(request):
     context = {}
 
@@ -62,11 +54,3 @@ def partners(request):
     else:
         context['form'] = PartnersForms()
     return render(request, 'partners.html', context)
-
-
-# class PartnersView(TemplateView):
-#     template_name = "partners.html"
-#
-#     def get_context_data(self, **kwargs):
-#         context = {}
-#         return context
