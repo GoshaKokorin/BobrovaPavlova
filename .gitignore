@@ -47,6 +47,7 @@ Thumbs.db
 local_settings.py
 .idea/*
 static
+templates_static
 media
 db.sqlite3
 venv

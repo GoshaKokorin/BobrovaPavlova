@@ -3,9 +3,12 @@ from .views import *
 
 urlpatterns = [
     path('services/', ServicesView.as_view(), name='services'),
+    path('services/<str:slug_service>/', single_services, name='single_services'),
+
     path('architecture/', ArhView.as_view(), name='architecture'),
     path('residential/', JilView.as_view(), name='residential'),
     path('commercial/', KomView.as_view(), name='commercial'),
+
     path('east_legend/', Project1View.as_view(), name='east_legend'),
     path('itmo/', Project2View.as_view(), name='itmo'),
     path('market/', Project3View.as_view(), name='market'),

@@ -6,10 +6,47 @@ class Vacancies(models.Model):
     type_employment = models.CharField('Тип занятости', max_length=255, blank=True, null=True)
     city = models.CharField('Город', max_length=255, blank=True, null=True)
     description = models.TextField('Описание', null=True, blank=True)
-    responsibilities = models.TextField('Обязанности', null=True, blank=True)
-    requirements = models.TextField('Требования', null=True, blank=True)
-    circumstances = models.TextField('Условия', null=True, blank=True)
     publish = models.BooleanField('Публикация', default=True)
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name = 'Вакансии'
+        verbose_name_plural = 'Вакансии'
+
+
+class Responsibilities(models.Model):
+    vacancies = models.ForeignKey(Vacancies, related_name='responsibilities', on_delete=models.CASCADE)
+    title = models.CharField('Обязанности', max_length=255, null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Обязанности'
+        verbose_name_plural = 'Обязанности'
+
+
+class Requirements(models.Model):
+    vacancies = models.ForeignKey(Vacancies, related_name='requirements', on_delete=models.CASCADE)
+    title = models.CharField('Требования', max_length=255, null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Требования'
+        verbose_name_plural = 'Требования'
+
+
+class Circumstances(models.Model):
+    vacancies = models.ForeignKey(Vacancies, related_name='circumstances', on_delete=models.CASCADE)
+    title = models.CharField('Условия', max_length=255, null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Условия'
+        verbose_name_plural = 'Условия'
