@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for item in blog %}
     <!-- main content -->
     <main class="main-page post-page-scroll-active fullpage-slider post-page-main-section-back">
+        <img width="100%" src="{{ MEDIA_URL }}{{ item.image1 }}" alt="">
         <div class="fullpage-slider__wrapper">
-            <section class="js-slider-item type-block architecture-type lazyload post-page-main-section-full-back post-page-section-no-pb">
+            <section class="js-slider-item type-block architecture-type lazyload post-page-main-section-full-back post-page-section-no-pb post-page-section-small-pt">
                 <div class="container">
                     <div class="post-page-type-block__content type-block__content type-block__content" data-swiper-animation="type_block">
                         <div class="type-block__content__left-side">
@@ -27,25 +27,22 @@
                                 <div class="descr-block post-content-item">
                                     <div class="post-page-descr-content">
                                         <p>
-                                            Равным образом консультация с широким активом требуют определения и уточнения модели развития. Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития. Равным образом консультация с широким активом требуют определения и уточнения модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке модели развития. . Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также укрепление и развитие структуры играет важную роль в формировании существенных финансовых и административных условий. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
+                                            {{ item.text1 }}
                                         </p>
                                     </div>
                                 </div>
                                 <div class="post-image-block image-block post-content-item">
-                                    <img src="{{ STATIC_URL }}images/common/post-page/post-page-2.jpg" alt="post-page-image" class="item-image">
+                                    <img src="{{ MEDIA_URL }}{{ item.image2 }}" alt="post-page-image" class="item-image">
                                 </div>
                                 <div class="descr-block post-content-item">
                                     <div class="post-page-descr-content">
                                         <p class="post-paragraph">
-                                            Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. С другой стороны укрепление и развитие структуры обеспечивает участие в формировании систем массового участия. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет оценить значение новых предложений. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет оценить значение новых предложений. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке модели развития.
-                                        </p>
-                                        <p>
-                                            Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу. Таким образом реализация намеченных плановых заданий позволяет оценить значение новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. Таким образом реализация намеченных плановых заданий позволяет оценить значение новых предложений. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет оценить значение новых предложений. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.
+                                            {{ item.text2 }}
                                         </p>
                                     </div>
                                 </div>
                                 <div class="post-image-block image-block post-content-item">
-                                    <img src="{{ STATIC_URL }}images/common/post-page/post-page-2.jpg" alt="post-page-image" class="item-image">
+                                    <img src="{{ MEDIA_URL }}{{ item.image3 }}" alt="post-page-image" class="item-image">
                                 </div>
                             </div>
                         </div>
@@ -67,7 +64,7 @@
                                 <div class="type-project blog__small-news-container" data-swiper-animation="type_project_1">
                                     <a href="#" class="item-link"></a>
                                     <div class="image-block blog__small-img-container">
-                                        <img src="{{ STATIC_URL }}images/common/post-page/post-page-3.jpg" alt="blog-image" class="post-page-next-img-big item-image">
+                                        <img src="{{ STATIC_URL }}images/common/post-page/post-page-4.jpg" alt="blog-image" class="post-page-next-img-big item-image">
                                     </div>
                                     <h2 class="post-page-title-next-first post-page-type-block__title type-block__title section-title" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">Обсуждение проекта</h2>
                                     <div class="type-block__descr section-descr" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
@@ -99,6 +96,5 @@
         </div>
         <div class="fullpage-slider__scroll"></div>
     </main>
-    {% endfor %}
     <!-- main end content -->
 {% endblock %}

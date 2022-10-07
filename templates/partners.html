@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
     <main class="main-page">
     <div class="container">
         <section class="type-block contacts-page-type delivery-page-type lazyload">
@@ -10,7 +11,7 @@
                         <h2 class="type-block__title section-title" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">Поставщикам</h2>
                         <div class="type-block__descr section-descr contacts-descr delivery-descr" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
                             <p>
-                                Если вы занимаетесь поставками материалов и ищете новых партнеров — свяжитесь с нами, мы рады полезному сотрудничеству. Вы можете позвонить нам или отправить сообщение по электронной почте, вам помогут Алена или Алексей
+                                Если вы занимаетесь поставками материалов и ищете новых партнеров — свяжитесь с нами, мы рады полезному сотрудничеству. Вы можете позвонить нам или отправить сообщение по электронной почте, вам помогут Алена или Алексей.
                             </p>
                         </div>
                         <div class="type-block__btn-row contacts__link-more" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
@@ -67,7 +68,6 @@
     <div class="fullpage-slider__scroll"></div>
     </main>
 
-
     <div class="modal backcall-modal" id="modal_application" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
             <div class="modal__container" role="dialog" aria-modal="true">
@@ -79,13 +79,12 @@
                     <button class="modal__close" aria-label="Закрыть" data-micromodal-close><i class="icon icon-close"></i></button>
                 </header>
                     <main class="modal__content">
-                    <form id="backcall_form" action="" data-modal="modal_application" data-success="application_ok" class="backcall-form" method="post">
-                        {% csrf_token %}
+                    <form id="backcall_form" action="" data-modal="modal_application" data-success="application_ok" class="ajax-form backcall-form">
                         <div class="input-group">
                             <input type="text" class="input-style" name="name" placeholder="Имя*">
                         </div>
                         <div class="input-group">
-                            <input type="text" class="input-style" name="phone" placeholder="Телефон*">
+                            <input type="text" class="input-style phone-input" name="phone" placeholder="Телефон*">
                         </div>
                         <div class="input-group">
                             <input type="email" class="input-style" name="email" placeholder="Почта*">
@@ -121,4 +120,6 @@
             </div>
         </div>
     </div>
+
+
 {% endblock %}

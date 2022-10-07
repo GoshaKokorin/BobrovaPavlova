@@ -10,6 +10,10 @@ class IndexForm(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = 'Форма обратной связи'
+        verbose_name_plural = 'Форма обратной связи'
+
 
 class PartnersForm(models.Model):
     name = models.CharField('name', max_length=100)
@@ -20,3 +24,7 @@ class PartnersForm(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = 'Форма партнера'
+        verbose_name_plural = 'Форма партнера'

@@ -67,25 +67,33 @@
                 </a>
                 <nav id="main-menu" class="main-menu" style="position: absolute; transform: translateY(-150vh);">
                     <div class="container">
-                        <div class="mmenu__content">
-                            <ul class="main-menu__list">
-                                <li class="main-menu__item main-item"><a href="/" class="main-menu__link">Главная</a></li>
-                                <li class="main-menu__item main-item"><a href="{% url 'services' %}" class="main-menu__link">Услуги</a></li>
-                                <li class="main-menu__item main-item"><a href="{% url 'about' %}" class="main-menu__link">О нас</a></li>
-                                <li class="main-menu__item"><a href="{% url 'blog' %}" class="main-menu__link">Блог</a></li>
-                                <li class="main-menu__item"><a href="{% url 'vacancies' %}" class="main-menu__link">Вакансии</a></li>
-                                <li class="main-menu__item"><a href="{% url 'contacts' %}" class="main-menu__link">Контакты</a></li>
-                                <li class="main-menu__item"><a href="{% url 'partners' %}" class="main-menu__link">Партнерам</a></li>
+                        <div class="main-menu__content">
+                            <ul class="mmenu-main__list">
+                                <li class="mmenu-main__item"><a href="/" class="mmenu-main__link">Главная</a></li>
+                                <li class="mmenu-main__item"><a href="{% url 'services' %}" class="mmenu-main__link">Услуги</a></li>
+                                <li class="mmenu-main__item"><a href="{% url 'about' %}" class="mmenu-main__link">О нас</a></li>
                             </ul>
-                            <div class="main-menu__links-block">
-                                <a href="tel:+78126710371" class="phone-link">+7 812 671 03 71</a>
+                            <ul class="mmenu-sub__list">
+                                <li class="mmenu-sub__item"><a href="{% url 'blog' %}" class="mmenu-sub__link">Блог</a></li>
+                                <li class="mmenu-sub__item"><a href="{% url 'vacancies' %}" class="mmenu-sub__link">Вакансии</a></li>
+                                <li class="mmenu-sub__item"><a href="{% url 'contacts' %}" class="mmenu-sub__link">Контакты</a></li>
+                                <li class="mmenu-sub__item"><a href="{% url 'partners' %}" class="mmenu-sub__link">Партнерам</a></li>
+                            </ul>
+                            <div class="mmenu-links">
+                                <a href="tel:+78126710371" class="phone-link">+7 812 671 0371</a>
                                 <a href="mailto:info@partners-bureau.com" class="mail-link">info@partners-bureau.com</a>
                             </div>
                         </div>
-                        <div class="mmenu__text">
-                            <div class="all"></div>
-                            <div class="bobrova" style="display: none;"></div>
-                            <div class="pavlova" style="display: none;"></div>
+                        <div class="main-menu__text">
+                            <div class="txt_mobile">
+                                <div class="txt"></div>
+                            </div>
+                            <div class="txt_desk bobrova" style="display: none;">
+                                <div class="txt"></div>
+                            </div>
+                            <div class="txt_desk pavlova" style="display: none;">
+                                <div class="txt"></div>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -108,10 +116,10 @@
             <div class="footer__content">
                 <div class="footer__content__left-side">
                     <address>Санкт-Петербург, <br> Пискаревский проспект, дом 1</address>
-                    <a href="{{ STATIC_URL }}images/price.pdf" class="download-link" download>Скачать прайс-лист</a>
+                    <a href="{{ STATIC_URL }}price.pdf" class="download-link" download>Скачать прайс-лист</a>
                 </div>
                 <div class="footer__content__right-side">
-                    <a href="tel:+78126710371" class="phone-link">+7 812 671 03 71</a>
+                    <a href="tel:+78126710371" class="phone-link">+7 812 671 0371</a>
                     <a href="mailto:info@partners-bureau.com" class="mail-link">info@partners-bureau.com</a>
                 </div>
             </div>
@@ -130,8 +138,10 @@
     <script defer src="{{ STATIC_URL }}js/demo.9ce5c2ea.js"></script>
     <script defer src="{{ STATIC_URL }}js/demo4.e22d7780.js"></script>
     <script defer src="{{ STATIC_URL }}js/wow.min.js"></script>
+     <script>
+        const send_url = 'http://localhost/send_url';
+    </script>
     <script defer src="{{ STATIC_URL }}js/common.min.js"></script>
-
     {% block extra_js %}
     {% endblock %}
 </body>

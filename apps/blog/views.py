@@ -1,7 +1,7 @@
 from django.http import Http404
 from django.views.generic.base import TemplateView
 from .models import Blog
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 
 class BlogView(TemplateView):
@@ -9,25 +9,13 @@ class BlogView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = {}
+        context['main_blog'] = get_object_or_404(Blog, main=True)
+
         return context
 
 
-# class BlogSingleView(TemplateView):
-#     query_pk_and_slug = 'slug'
-#     template_name = "blog_single.html"
-#
-#     def get_context_data(self, **kwargs):
-#         context = {}
-#
-#         return context
-
 def blog_single(request, slug_blog):
     context = {}
-
-    if Blog.objects.filter(slug=slug_blog).exists():
-        blog = Blog.objects.filter(slug=slug_blog)
-        context['blog'] = blog
-    else:
-        raise Http404
+    context['item'] = get_object_or_404(Blog, slug=slug_blog)
 
     return render(request, 'blog_single.html', context)

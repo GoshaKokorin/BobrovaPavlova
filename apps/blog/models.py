@@ -1,8 +1,13 @@
 from django.db import models
+from django.urls import reverse
 
+
+# TODO: Страница блога
+# TODO: Страница одного блога(читайте дальше)
 
 class Blog(models.Model):
     title = models.CharField('Заголовок', max_length=255)
+    slug = models.SlugField('slug', max_length=255, unique=True)
     description = models.CharField('Описание', max_length=255)
     image1 = models.ImageField('Главная картинка', upload_to='blog/', default='blog/no_image.jpg', null=True)
     text1 = models.TextField('Первая часть текста', null=True, blank=True)
@@ -11,7 +16,6 @@ class Blog(models.Model):
     image3 = models.ImageField('Третья картинка', upload_to='blog/', default='blog/no_image.jpg', null=True)
     publish = models.BooleanField('Публикация', default=True)
     main = models.BooleanField('Главная новость', default=False)
-    slug = models.SlugField('slug', max_length=255, blank=True, unique=True)
 
     def __str__(self):
         return self.title
@@ -21,4 +25,6 @@ class Blog(models.Model):
         verbose_name_plural = 'Блог'
 
     def get_absolute_url(self):
-        return '/blog/%s/' % self.slug
+        return reverse('blog_single', kwargs={'slug_blog': self.slug})
+
+    #     return '/blog/%s/' % self.slug

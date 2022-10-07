@@ -1,14 +1,14 @@
 from django.contrib import admin
-from .models import Services, Projects
+from .models import *
 
 
 @admin.register(Services)
-class ServicesFormAdmin(admin.ModelAdmin):
+class ServicesAdmin(admin.ModelAdmin):
     list_display = ['title']
     prepopulated_fields = {'slug': ('title',)}
 
 
 @admin.register(Projects)
-class ProjectsFormAdmin(admin.ModelAdmin):
+class ProjectsAdmin(admin.ModelAdmin):
     list_display = ['title']
     prepopulated_fields = {'slug': ('title',)}
