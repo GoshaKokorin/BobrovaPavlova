@@ -1,4 +1,4 @@
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from django.views.generic.base import TemplateView
 from django.shortcuts import render, get_object_or_404
 
@@ -7,6 +7,7 @@ from ..blog.models import Blog
 
 
 # TODO: пофиксить вывод проектов в любой услуге
+
 class ServicesView(TemplateView):
     template_name = "services.html"
 
@@ -15,14 +16,20 @@ class ServicesView(TemplateView):
         service = Services.objects.all()
         context['service'] = service
 
-        architecture = Services.objects.get(id=2)
-        context['architecture'] = architecture
+        try:
+            context['architecture'] = get_object_or_404(Services, id=2)
+        except:
+            return HttpResponseRedirect('/error')
 
-        residential = Services.objects.get(id=3)
-        context['residential'] = residential
+        try:
+            context['residential'] = get_object_or_404(Services, id=3)
+        except:
+            return HttpResponseRedirect('/error')
 
-        commercial = Services.objects.get(id=4)
-        context['commercial'] = commercial
+        try:
+            context['commercial'] = get_object_or_404(Services, id=4)
+        except:
+            return HttpResponseRedirect('/error')
 
         context['main_blog'] = get_object_or_404(Blog, main=True)
         context['other_blog'] = Blog.objects.filter(publish=True).order_by('-pk')[:2]

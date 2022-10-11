@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.base import TemplateView
 from apps.index.forms import IndexForms, PartnersForms
@@ -9,9 +9,20 @@ from apps.blog.models import Blog
 def index(request):
     context = {}
 
-    context['architecture'] = Services.objects.get(id=2)
-    context['residential'] = Services.objects.get(id=3)
-    context['commercial'] = Services.objects.get(id=4)
+    try:
+        context['architecture'] = get_object_or_404(Services, id=2)
+    except:
+        return HttpResponseRedirect('/error')
+
+    try:
+        context['residential'] = get_object_or_404(Services, id=3)
+    except:
+        return HttpResponseRedirect('/error')
+
+    try:
+        context['commercial'] = get_object_or_404(Services, id=4)
+    except:
+        return HttpResponseRedirect('/error')
 
     if request.method == 'POST':
         form = IndexForms(request.POST)
@@ -72,3 +83,7 @@ class AboutView(TemplateView):
     def get_context_data(self, **kwargs):
         context = {}
         return context
+
+
+class ErrorView(TemplateView):
+    template_name = "error.html"
