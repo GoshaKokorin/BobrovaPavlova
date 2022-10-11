@@ -9,20 +9,23 @@ from apps.blog.models import Blog
 def index(request):
     context = {}
 
-    try:
-        context['architecture'] = get_object_or_404(Services, id=2)
-    except:
-        return HttpResponseRedirect('/error')
-
-    try:
-        context['residential'] = get_object_or_404(Services, id=3)
-    except:
-        return HttpResponseRedirect('/error')
-
-    try:
-        context['commercial'] = get_object_or_404(Services, id=4)
-    except:
-        return HttpResponseRedirect('/error')
+    # try:
+    #     context['architecture'] = get_object_or_404(Services, id=2)
+    # except:
+    #     return HttpResponseRedirect('/error')
+    #
+    # try:
+    #     context['residential'] = get_object_or_404(Services, id=3)
+    # except:
+    #     return HttpResponseRedirect('/error')
+    #
+    # try:
+    #     context['commercial'] = get_object_or_404(Services, id=4)
+    # except:
+    #     return HttpResponseRedirect('/error')
+    context['architecture'] = get_object_or_404(Services, pk=2)
+    context['residential'] = get_object_or_404(Services, pk=3)
+    context['commercial'] = get_object_or_404(Services, pk=4)
 
     if request.method == 'POST':
         form = IndexForms(request.POST)
@@ -79,10 +82,6 @@ def partners(request):
 
 class AboutView(TemplateView):
     template_name = "about.html"
-
-    def get_context_data(self, **kwargs):
-        context = {}
-        return context
 
 
 class ErrorView(TemplateView):

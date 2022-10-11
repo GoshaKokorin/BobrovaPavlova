@@ -4,7 +4,7 @@ from .models import *
 
 @admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
-    list_display = ['title']
+    list_display = ['title', 'pk']
     prepopulated_fields = {'slug': ('title',)}
 
 
