@@ -13,23 +13,7 @@ class ServicesView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = {}
-        service = Services.objects.all()
-        context['service'] = service
-
-        # try:
-        #     context['architecture'] = get_object_or_404(Services, id=2)
-        # except:
-        #     return HttpResponseRedirect('/error')
-        #
-        # try:
-        #     context['residential'] = get_object_or_404(Services, id=3)
-        # except:
-        #     return HttpResponseRedirect('/error')
-        #
-        # try:
-        #     context['commercial'] = get_object_or_404(Services, id=4)
-        # except:
-        #     return HttpResponseRedirect('/error')
+        context['service'] = Services.objects.all()
 
         context['architecture'] = get_object_or_404(Services, pk=2)
         context['residential'] = get_object_or_404(Services, pk=3)
@@ -65,5 +49,8 @@ def project(request, slug_service, slug_project):
         context['projects'] = projects
     else:
         raise Http404
+
+    context['main_blog'] = get_object_or_404(Blog, main=True)
+    context['other_blog'] = Blog.objects.filter(publish=True).order_by('-pk')[:2]
 
     return render(request, 'project_single.html', context)
