@@ -1,60 +1,58 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-       
-            <section class="type-block contacts-page-type lazyload">
-                <div class="container">
-                    <div class="type-block__content" data-swiper-animation="type_block">
-                        <div class="type-block__content__left-side">
-                            <h2 class="type-block__title section-title" data-swiper-parallax="-150%"
-                                data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">Контакты</h2>
-                            <div class="type-block__descr section-descr contacts-descr" data-swiper-parallax="-150%"
-                                 data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
-                                <div class="contacts__link-container flex">
-                                    <a class="contacts__link mail-link" href="mailto:info@partners-bureau.com">
-                                        info@partners-bureau.com
-                                    </a>
-                                    <a class="contacts__link phone-link" href="tel:+78126710371">
-                                        +7 812 671 0371
-                                    </a>
-                                </div>
-                                <div class="contacts__adress-container">
-                                    <h3 class="contacts__title_adress">
-                                        Адрес
-                                    </h3>
-                                    <address class="descr contacts__adress ">
-                                        Санкт-Петербург, Пискаревский проспект, дом 1
-                                    </address>
-                                </div>
-                            </div>
-                            <div class="type-block__btn-row contacts__link-more" data-swiper-parallax="-150%"
-                                 data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
-                                <a href="javascript:void(0);" data-micromodal-trigger="modal_backcall"
-                                   class="more-link btn-style button contacts-btn-style">
-                                    <div class="button__filler"></div>
-                                    <span class="button__text">
-                                <span class="button__text-inner">Связаться с нами</span>
-                                </span>
-                                </a>
-                            </div>
+    <section class="type-block contacts-page-type lazyload">
+        <div class="container">
+            <div class="type-block__content" data-swiper-animation="type_block">
+                <div class="type-block__content__left-side">
+                    <h2 class="type-block__title section-title" data-swiper-parallax="-150%"
+                        data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">Контакты</h2>
+                    <div class="type-block__descr section-descr contacts-descr" data-swiper-parallax="-150%"
+                         data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
+                        <div class="contacts__link-container flex">
+                            <a class="contacts__link mail-link" href="mailto:info@partners-bureau.com">
+                                info@partners-bureau.com
+                            </a>
+                            <a class="contacts__link phone-link" href="tel:+78126710371">
+                                +7 812 671 0371
+                            </a>
                         </div>
-                        <div class="type-block__content__right-side">
-                            <div class="type-project contacts__map-container desktop">
-                                <script type="text/javascript" charset="utf-8" async
-                                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa2d24ab1aa2ec66733939c82e028656e55c6a7b1e85ef42cb1346ff2292556f1&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
-                            </div>
+                        <div class="contacts__adress-container">
+                            <h3 class="contacts__title_adress">
+                                Адрес
+                            </h3>
+                            <address class="descr contacts__adress ">
+                                Санкт-Петербург, Пискаревский проспект, дом 1
+                            </address>
                         </div>
                     </div>
+                    <div class="type-block__btn-row contacts__link-more" data-swiper-parallax="-150%"
+                         data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">
+                        <a href="javascript:void(0);" data-micromodal-trigger="modal_backcall"
+                           class="more-link btn-style button contacts-btn-style">
+                            <div class="button__filler"></div>
+                            <span class="button__text">
+                                <span class="button__text-inner">Связаться с нами</span>
+                                </span>
+                        </a>
+                    </div>
                 </div>
-            </section>
-       
-        <div class="type-project contacts__map-container mob-block">
-            <script type="text/javascript" charset="utf-8" async
-                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa2d24ab1aa2ec66733939c82e028656e55c6a7b1e85ef42cb1346ff2292556f1&amp;width=100%25&amp;height=320&amp;lang=ru_RU&amp;scroll=true"></script>
+                <div class="type-block__content__right-side">
+                    <div class="type-project contacts__map-container desktop">
+                        <script type="text/javascript" charset="utf-8" async
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa2d24ab1aa2ec66733939c82e028656e55c6a7b1e85ef42cb1346ff2292556f1&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="fullpage-slider__scroll"></div>
-  
+    </section>
+
+    <div class="type-project contacts__map-container mob-block">
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa2d24ab1aa2ec66733939c82e028656e55c6a7b1e85ef42cb1346ff2292556f1&amp;width=100%25&amp;height=320&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+    <div class="fullpage-slider__scroll"></div>
+
 
     <div class="modal backcall-modal" id="modal_backcall" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
@@ -63,19 +61,18 @@
                 <div class="modal__container__right-side">
                     <header class="modal__header">
                         <h2 class="modal__title">Есть вопрос?</h2>
-                        <h3 class="modal__subtitle">Мы готовы связаться с вами и проконсультировать</h3>
+                        <h3 class="modal__subtitle">Мы готовы связаться с Вами и проконсультировать</h3>
                         <button class="modal__close" aria-label="Закрыть" data-micromodal-close><i
                                 class="icon icon-close"></i></button>
                     </header>
                     <main class="modal__content">
-                        <form id="backcall_form" action="" data-modal="modal_backcall" data-success="backcall_ok"
-                              class="backcall-form" method="POST">
-                            {% csrf_token %}
+                        <form id="backcall_form" class="ajax-form backcall-form" action="" data-modal="modal_backcall"
+                              data-success="backcall_ok">
                             <div class="input-group">
-                                <input type="text" class="input-style" name="name" placeholder="Имя*">
+                                <input type="text" class="input-style name-input" name="name" placeholder="Имя*">
                             </div>
                             <div class="input-group">
-                                <input type="text" class="input-style" name="phone" placeholder="Телефон*">
+                                <input type="text" class="input-style phone-input" name="phone" placeholder="Телефон*">
                             </div>
                             <div class="input-group error-group" style="display: none;">
                                 <p>Пожалуйста, заполните все формы</p>
@@ -96,7 +93,7 @@
                 <div class="modal__container__right-side">
                     <header class="modal__header">
                         <h2 class="modal__title">Отлично</h2>
-                        <h3 class="modal__subtitle">Сейчас ознакомимся с нужной информацией и свяжемся с вами</h3>
+                        <h3 class="modal__subtitle">Сейчас ознакомимся с нужной информацией и свяжемся с Вами</h3>
                     </header>
                     <main class="modal__content">
                         <button class="btn-style gray-style" aria-label="Закрыть" data-micromodal-close>Закрыть</button>
@@ -105,4 +102,11 @@
             </div>
         </div>
     </div>
+
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        const send_url = {% url 'contact_form' %};
+    </script>
 {% endblock %}

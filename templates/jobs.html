@@ -3,7 +3,7 @@
 {% block content %}
     <!-- main content -->
     <main class="main-page scroll-active-page main-page-no-pt fullpage-slider main-page-jobs-relative">
-        <img class="jobs-main-img" src="images/common/job/job-back.jpg" alt="">
+        <img class="jobs-main-img" src="{{ STATIC_URL }}images/common/job/job-back.jpg" alt="">
         <div class="fullpage-slider__wrapper jobs__wrapper">
             <section class="js-slider-item type-block architecture-type lazyload job__main-section">
                 <div class="container">
@@ -184,19 +184,6 @@
                     </div>
                 </div>
             </section>
-
-            <div class="js-slider-item backcall-block">
-                <div class="container">
-                    <a href="javascript:void(1);" data-micromodal-trigger="modal_backcall"
-                       class="backcall-btn btn-style gray-style button">
-                        <div class="button__filler"></div>
-                        <span class="button__text">
-                        <span class="button__text-inner"><i class="icon icon-arrow"></i></span>
-                        </span>
-                    </a>
-                </div>
-                <div class="jobs__backcall-bg backcall-bg"></div>
-            </div>
         </div>
         <div class="fullpage-slider__scroll"></div>
     </main>
@@ -257,53 +244,10 @@
             </div>
         </div>
     </div>
+{% endblock %}
 
-    <div class="modal backcall-modal" id="modal_backcall" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true">
-                <div class="modal__container__left-side"></div>
-                <div class="modal__container__right-side">
-                    <header class="modal__header">
-                        <h2 class="modal__title">Есть вопрос?</h2>
-                        <h3 class="modal__subtitle">Мы готовы связаться с вами и проконсультировать</h3>
-                        <button class="modal__close" aria-label="Закрыть" data-micromodal-close><i
-                                class="icon icon-close"></i></button>
-                    </header>
-                    <main class="modal__content">
-                        <form id="backcall_form" action="" data-modal="modal_backcall" data-success="backcall_ok"
-                              class="backcall-form">
-                            <div class="input-group">
-                                <input type="text" class="input-style" name="name" placeholder="Имя*">
-                            </div>
-                            <div class="input-group">
-                                <input type="text" class="input-style" name="phone" placeholder="Телефон*">
-                            </div>
-                            <div class="input-group error-group" style="display: none;">
-                                <p>Пожалуйста, заполните все формы</p>
-                            </div>
-                            <div class="input-group btn-group">
-                                <button type="submit" class="btn-style gray-style">Отправить</button>
-                            </div>
-                        </form>
-                    </main>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal ok-modal backcall-ok" id="backcall_ok" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true">
-                <div class="modal__container__left-side"></div>
-                <div class="modal__container__right-side">
-                    <header class="modal__header">
-                        <h2 class="modal__title">Отлично</h2>
-                        <h3 class="modal__subtitle">Сейчас ознакомимся с нужной информацией и свяжемся с вами</h3>
-                    </header>
-                    <main class="modal__content">
-                        <button class="btn-style gray-style" aria-label="Закрыть" data-micromodal-close>Закрыть</button>
-                    </main>
-                </div>
-            </div>
-        </div>
-    </div>
+{% block extra_js %}
+    <script>
+        const send_url = {% url 'vacancies_form' %};
+    </script>
 {% endblock %}

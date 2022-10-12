@@ -50,3 +50,18 @@ class Circumstances(models.Model):
     class Meta:
         verbose_name = 'Условия'
         verbose_name_plural = 'Условия'
+
+
+class VacanciesForm(models.Model):
+    name = models.CharField('name', max_length=100)
+    phone = models.CharField('phone', max_length=25)
+    email = models.CharField('email', max_length=100)
+    url = models.CharField('url', max_length=100)
+    сhecked = models.BooleanField('сhecked', default=False)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Форма вакансии'
+        verbose_name_plural = 'Форма вакансии'

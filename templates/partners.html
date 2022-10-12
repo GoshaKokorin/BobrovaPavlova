@@ -65,7 +65,6 @@
         </section>
    
     <div class="fullpage-slider__scroll"></div>
-   
 
     <div class="modal backcall-modal" id="modal_application" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
@@ -121,4 +120,10 @@
     </div>
 
 
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        const send_url = {% url 'partners_form' %};
+    </script>
 {% endblock %}
