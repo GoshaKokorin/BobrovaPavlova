@@ -26,5 +26,3 @@ class Blog(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog_single', kwargs={'slug_blog': self.slug})
-
-    #     return '/blog/%s/' % self.slug
