@@ -2,9 +2,7 @@
 
 {% block content %}
     <!-- main content -->
-    <main class="main-page post-page-scroll-active fullpage-slider post-page-main-section-back">
         <img width="100%" style="max-height: 60vh !important; object-fit: cover;" src="{{ MEDIA_URL }}{{ item.image1 }}" alt="">
-        <div class="fullpage-slider__wrapper">
             <section class="js-slider-item type-block__style-secondary type-block architecture-type lazyload post-page-main-section-full-back post-page-section-no-pb post-page-section-small-pt">
                 <div class="container">
                     <div class="post-page-type-block__content type-block__content type-block__content" data-swiper-animation="type_block">
@@ -18,11 +16,11 @@
                     </div>
                 </div>
             </section>
-            <section class="js-slider-item type-block__style-secondary type-block living-type post-page-main-section-full-back">
+            <section class="js-slider-item post-page__type-section type-block__style-secondary type-block living-type post-page-main-section-full-back">
                 <div class="container">
-                    <div class="post-page__type-block__content type-block__content" data-swiper-animation="type_block">
-                        <div class="type-block__content__left-side post-page__right-small-container"></div>
-                        <div class="post-pagetype-block__content__right-side type-block__content__right-side post-page__mob-mb">
+                    <div class="type-block__content post-page-type-block__content_d wow-js">
+                        <div class="type-block__content__left-side post-page__left-no-padding"></div>
+                        <div class="type-block__content__right-side">
                             <div class="type-project" data-swiper-animation="type_project_1">
                                 <div class="descr-block post-content-item">
                                     <div class="post-page-descr-content">
@@ -50,13 +48,21 @@
                 </div>
             </section>
             <section class="js-slider-item post-page__type-section type-block__style-secondary type-block living-type post-page-main-section-full-back">
-                <div class="container">
-                    <div class="post-page-continious">
+                <div class="type-block__content post-page-type-block__content_d wow-js">
+                    <div class="type-block__content__left-side post-page__left-no-padding">
                         <h2 id="title-next" class="post-page-type-block__title type-block__title section-title" data-swiper-parallax="-150%" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1200">Читайте также</h2>
-                        <a class="btn-style desktop" href="{% url 'blog' %}">
-                            Смотреть все
-                        </a>
                     </div>
+                    <div class="type-block__content__right-side right-side-post-page-btn-container desktop">
+                        <div class="type-block__btn-row">
+                            <a href="{% url 'blog' %}" class="more-link btn-style button">
+                                <div class="button__filler"></div>
+                                <span class="button__text">
+                                <span class="button__text-inner">Смотреть все</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                     <div class="post-page-container-type-block__content type-block__content" data-swiper-animation="type_block">
                         <div style="margin-bottom: 30px" class="type-block__content__right-side">
                             <div class="type-project" data-swiper-animation="type_project_1">
@@ -76,7 +82,7 @@
                         <div class="post-page__left-no-padding">
                             <a href="blog_single.html" class="item-link"></a>
                             <div class="type-project blog__small-news-container" data-swiper-animation="type_project_1">
-                                <a href="#" class="item-link"></a>
+                                <a href="#" class="item-link_d"></a>
                                 <div class="image-block blog__small-img-container ">
                                     <img src="{{ STATIC_URL }}images/common/post-page/post-page-4.jpg" alt="blog-image" class="post-page-next-img-small blog__image item-image">
                                 </div>
@@ -87,14 +93,19 @@
                         </div>
                     </div>
                     <div class="mob-block mb-last">
-                        <a class="btn-style" href="blog.html">
-                            Смотреть все
-                        </a>
+                       <div class="type-block__btn-row">
+                            <a href="{% url 'blog' %}" class="more-link btn-style button">
+                                <div class="button__filler"></div>
+                                <span class="button__text">
+                                    <span class="button__text-inner">
+                                        Смотреть все
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
-        </div>
         <div class="fullpage-slider__scroll"></div>
-    </main>
     <!-- main end content -->
 {% endblock %}
