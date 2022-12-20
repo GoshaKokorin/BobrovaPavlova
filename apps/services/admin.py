@@ -6,6 +6,7 @@ from .models import *
 class ServicesAdmin(admin.ModelAdmin):
     list_display = ['title', 'pk']
     prepopulated_fields = {'slug': ('title',)}
+    # exclude = ('slug',)
 
 
 @admin.register(Projects)
