@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 
 
 class BlogView(TemplateView):
-    template_name = "blog.html"
+    template_name = "404.html"
 
     def get_context_data(self, **kwargs):
         context = {}
@@ -17,4 +17,4 @@ def blog_single(request, slug_blog):
     context = {}
     context['item'] = get_object_or_404(Blog, slug=slug_blog)
 
-    return render(request, 'blog_single.html', context)
+    return render(request, '404.html', context)

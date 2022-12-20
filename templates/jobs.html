@@ -141,49 +141,49 @@
                 </section>
             {% endif %}
 
-            <section class="js-slider-item job__type-section news-block">
-                <div class="container">
-                    <div class="news-block__content wow-js" animation="news_block">
-                        <div class="news-block__content__left-side">
-                            <h2 class="news-block__title section-title">Блог</h2>
-                            <a href="{% url 'blog' %}" class="see-all btn-style button">
-                                <div class="button__filler"></div>
-                                <span class="button__text">
-                        <span class="button__text-inner">Смотреть все</span>
-                        </span>
-                            </a>
-                        </div>
-                        <div class="news-block__content__right-side">
-                            <div class="news-item big-item">
-                                <a href="{{ main_blog.get_absolute_url }}" class="item-link"></a>
-                                <div class="image-block">
-                                    <img src="{{ MEDIA_URL }}{{ main_blog.image1 }}" alt="news-image"
-                                         class="news-image lazyload">
-                                </div>
-                                <div class="descr-block">
-                                    <h3 class="news-title section-title">{{ main_blog.title }}</h3>
-                                    <div class="news-descr section-descr">
-                                        <p>{{ main_blog.description }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {% for item in other_blog %}
-                                <div class="news-item">
-                                    <a href="{{ item.get_absolute_url }}" class="item-link"></a>
-                                    <div class="image-block">
-                                        <img src="{{ MEDIA_URL }}{{ item.image1 }}" alt="news-image"
-                                             class="news-image lazyload">
-                                    </div>
-                                    <div class="descr-block">
-                                        <h3 class="news-title section-title">{{ item.title }}</h3>
-                                    </div>
-                                </div>
-                            {% endfor %}
+{#            <section class="js-slider-item job__type-section news-block">#}
+{#                <div class="container">#}
+{#                    <div class="news-block__content wow-js" animation="news_block">#}
+{#                        <div class="news-block__content__left-side">#}
+{#                            <h2 class="news-block__title section-title">Блог</h2>#}
+{#                            <a href="{% url 'blog' %}" class="see-all btn-style button">#}
+{#                                <div class="button__filler"></div>#}
+{#                                <span class="button__text">#}
+{#                        <span class="button__text-inner">Смотреть все</span>#}
+{#                        </span>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                        <div class="news-block__content__right-side">#}
+{#                            <div class="news-item big-item">#}
+{#                                <a href="{{ main_blog.get_absolute_url }}" class="item-link"></a>#}
+{#                                <div class="image-block">#}
+{#                                    <img src="{{ MEDIA_URL }}{{ main_blog.image1 }}" alt="news-image"#}
+{#                                         class="news-image lazyload">#}
+{#                                </div>#}
+{#                                <div class="descr-block">#}
+{#                                    <h3 class="news-title section-title">{{ main_blog.title }}</h3>#}
+{#                                    <div class="news-descr section-descr">#}
+{#                                        <p>{{ main_blog.description }}</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            {% for item in other_blog %}#}
+{#                                <div class="news-item">#}
+{#                                    <a href="{{ item.get_absolute_url }}" class="item-link"></a>#}
+{#                                    <div class="image-block">#}
+{#                                        <img src="{{ MEDIA_URL }}{{ item.image1 }}" alt="news-image"#}
+{#                                             class="news-image lazyload">#}
+{#                                    </div>#}
+{#                                    <div class="descr-block">#}
+{#                                        <h3 class="news-title section-title">{{ item.title }}</h3>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            {% endfor %}#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </section>#}
 
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
         <div class="fullpage-slider__scroll"></div>
     </main>
