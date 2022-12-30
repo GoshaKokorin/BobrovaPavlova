@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.contrib.auth.models import Group, User
+
 from .models import IndexForm, PartnersForm
 
 
@@ -12,3 +14,8 @@ class IndexFormAdmin(admin.ModelAdmin):
 class PartnersFormAdmin(admin.ModelAdmin):
     list_display = ['name', 'phone', 'сhecked']
     list_editable = ['сhecked', ]
+
+
+admin.site.unregister(Group)
+admin.site.unregister(User)
+
