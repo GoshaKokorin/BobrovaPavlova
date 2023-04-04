@@ -22,4 +22,3 @@ class VacanciesAdmin(admin.ModelAdmin):
     list_display = ['title', 'publish']
     list_editable = ['publish', ]
     inlines = [ResponsibilitiesAdmin, RequirementsAdmin, CircumstancesAdmin]
-
