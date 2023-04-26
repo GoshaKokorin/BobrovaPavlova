@@ -68,6 +68,7 @@
                     <main class="modal__content">
                         <form id="backcall_form" class="ajax-form backcall-form" action="" data-modal="modal_backcall"
                               data-success="backcall_ok">
+                            {% csrf_token %}
                             <div class="input-group">
                                 <input type="text" class="input-style name-input" name="name" placeholder="Имя*">
                             </div>
