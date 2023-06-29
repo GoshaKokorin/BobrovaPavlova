@@ -1,0 +1,121 @@
+.delivery-page-type {
+    margin-top: 50px;
+}
+
+.delivery__footer__copyright {
+    margin-top: 200px !important;
+}
+
+.delivery-descr {
+    max-width: 500px;
+}
+
+.delivery__type-block {
+    flex-direction: column;
+    -webkit-box-pack: end !important;
+    -ms-flex-pack: end !important;
+    justify-content: flex-end !important;
+}
+
+.delivery__type-block-content {
+    min-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+    margin-bottom: 67px;
+}
+
+.type-block__content__right-side .delivery__type-project:nth-of-type(2n) {
+    margin: 0 !important;
+}
+
+.delivery__type-block-content-container {
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+
+.delivery__type-project {
+    width: 45% !important;
+}
+
+.delivery__type-block-content .img-block,
+.delivery__type-block-content img {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.delivery__type-block__content__left-side,
+.delivery__type-block__content__right-side {
+    flex: 47% !important;
+    max-width: 47% !important;
+}
+
+.delivery-name {
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #1E1E1E;
+}
+
+.delivery-position {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #1E1E1E;
+    opacity: 0.5;
+}
+
+.delivery__link-container {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .delivery__link-container {
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .delivery-page-type {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .delivery-page-type {
+        padding-bottom: 0 !important;
+        margin-top: 50px;
+        margin-bottom: 24px;
+    }
+
+    .delivery__type-block__content__left-side,
+    .delivery__type-block__content__right-side {
+        flex: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .delivery__type-block__content__right-side {
+        margin-top: 25px !important;
+    }
+
+    .delivery__link-container {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .delivery__type-block-content {
+        margin-bottom: 40px;
+    }
+
+    .delivery__link-container {
+        margin-bottom: 15px !important;
+    }
+}
