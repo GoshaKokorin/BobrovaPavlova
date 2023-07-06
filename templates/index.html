@@ -46,12 +46,6 @@
                                 <img src="{{ STATIC_URL }}images/common/main_page/main_image6.jpg" alt="image"
                                      class="image">
                             </div>
-                            <!--
-                            <div class="images-wrapper__item">
-                                <img src="{{ STATIC_URL }}images/common/main_page/main_image8.jpg" alt="image"
-                                     class="image">
-                            </div>
-                        -->
                         </div>
                     </div>
                 </div>
@@ -181,69 +175,6 @@
             </div>
         </div>
     </section>
-
-<!--
-
-    <section class="type-block commercial-type black-style">
-        <div class="container">
-            <div class="type-block__content wow-js" animation="type_block">
-                <div class="type-block__content__left-side">
-                    <h2 class="type-block__title section-title">{{ commercial.title }}</h2>
-                    <div class="type-block__descr section-descr">
-                        <p>{{ commercial.description }}</p>
-                    </div>
-                    <div class="type-block__btn-row">
-                        <a href="{{ commercial.get_absolute_url }}" class="more-link btn-style button white-style">
-                            <div class="button__filler"></div>
-                            <span class="button__text">
-                            <span class="button__text-inner">Подробнее</span>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="type-block__content__right-side">
-                    <div class="type-project wow-js" animation="type_project_1">
-                        <a href="{{ commercial_project1.get_absolute_url }}" class="item-link"></a>
-                        <div class="image-block">
-                            <img src="{{ MEDIA_URL }}{{ commercial_project1.image1 }}"
-                                 alt="architecture-image" class="item-image lazyload">
-                        </div>
-                        <div class="descr-block">
-                            <h3 class="project-name">{{ commercial_project1.title }}</h3>
-                            <time class="date">{{ commercial_project1.year }}</time>
-                            <div class="add-info">
-                                <p>{{ commercial_project1.description }}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="type-project wow-js" animation="type_project_2">
-                        <a href="{{ commercial_project2.get_absolute_url }}" class="item-link"></a>
-                        <div class="image-block">
-                            <img src="{{ MEDIA_URL }}{{ commercial_project2.image1 }}"
-                                 alt="architecture-image" class="item-image lazyload">
-                        </div>
-                        <div class="descr-block">
-                            <h3 class="project-name">{{ commercial_project2.title }}</h3>
-                            <time class="date">{{ commercial_project2.year}}</time>
-                        </div>
-                    </div>
-
-                    <div class="type-project wow-js" animation="type_project_3">
-                        <a href="{{ commercial_project3.get_absolute_url }}" class="item-link"></a>
-                        <div class="image-block">
-                            <img src="{{ MEDIA_URL }}{{ commercial_project3.image1 }}"
-                                 alt="architecture-image" class="item-image lazyload">
-                        </div>
-                        <div class="descr-block">
-                            <h3 class="project-name">{{ commercial_project3.title }}</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
--->
     <section class="price-block">
         <div class="container">
             <div class="price-block__content wow-js" animation="price_block">
@@ -415,96 +346,6 @@
             </div>
         </div>
     </section>
-
-<!--
-
-    <section class="work-block">
-        <div class="container">
-            <div class="work-block__content wow-js" animation="work_block">
-                <div class="work-block__content__left-side">
-                    <h2 class="work-block__title section-title">Как мы работаем</h2>
-                </div>
-                <div class="work-block__content__right-side">
-                    <div id="work-slider" class="swiper work-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide slide-item">
-                                <div class="image-block">
-                                    <img src="{{ STATIC_URL }}images/common/works/work_image1.jpg" alt="work"
-                                         class="slide-image">
-                                </div>
-                                <div class="descr-block">
-                                    <h3 class="slide-title">Обсуждение проекта</h3>
-                                    <div class="slide-descr">
-                                        <p>Познакомимся с вами и вашим проектом, углубимся в задачу и обсудим, как ее
-                                            реализовать. Также выделим менеджера проекта, ведущего архитектора и
-                                            ассистента, настроим удобный для вас способ коммуникации.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-item">
-                                <div class="image-block">
-                                    <img src="{{ STATIC_URL }}images/common/works/work_image2.jpg" alt="work"
-                                         class="slide-image">
-                                </div>
-                                <div class="descr-block">
-                                    <h3 class="slide-title">Визуализация</h3>
-                                    <div class="slide-descr">
-                                        <p>Создадим реалистичные изображения будущего здания или интерьера, проверим
-                                            композицию и согласуем с вами. Если необходимо, внесем правки.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-item">
-                                <div class="image-block">
-                                    <img src="{{ STATIC_URL }}images/common/works/work_image3.jpg" alt="work"
-                                         class="slide-image">
-                                </div>
-                                <div class="descr-block">
-                                    <h3 class="slide-title">Подготовка объекта</h3>
-                                    <div class="slide-descr">
-                                        <p>Проведем фотофиксацию и топосъемку, измерим помещение. Если нужно — привлечем
-                                            геодезиста для проведения технического обследования состояния несущих
-                                            конструкций, кровли и фундамента здания.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-item">
-                                <div class="image-block">
-                                    <img src="{{ STATIC_URL }}images/common/works/work_image4.jpg" alt="work"
-                                         class="slide-image">
-                                </div>
-                                <div class="descr-block">
-                                    <h3 class="slide-title">Подготовка чертежей</h3>
-                                    <div class="slide-descr">
-                                        <p>Разработаем рабочие чертежи, которые необходимы для дальнейшей реализации
-                                            принятых решений, создадим график работ, по которому можно отслеживать сроки
-                                            выполнения.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-item">
-                                <div class="image-block">
-                                    <img src="{{ STATIC_URL }}images/common/works/work_image5.jpg" alt="work"
-                                         class="slide-image">
-                                </div>
-                                <div class="descr-block">
-                                    <h3 class="slide-title">Отслеживание проекта</h3>
-                                    <div class="slide-descr">
-                                        <p>При необходимости осуществим авторский надзор — будем посещать стройку не
-                                            реже 4 раз в неделю, будем курировать строительные процессы и контролировать
-                                            качество исполнения, поможем с выбором и приобретением материалов.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
--->
-
     <section class="info-block">
         <div class="container">
             <div class="info-block__content wow-js" animation="info_block">
@@ -562,51 +403,6 @@
             </div>
         </div>
     </section>
-
-
-{#    <section class="js-slider-item news-block">#}
-{#        <div class="container">#}
-{#            <div class="news-block__content wow-js" animation="news_block">#}
-{#                <div class="news-block__content__left-side">#}
-{#                    <h2 class="news-block__title section-title">Новости</h2>#}
-{#                    <a href="{% url 'blog' %}" class="see-all btn-style button">#}
-{#                        <div class="button__filler"></div>#}
-{#                        <span class="button__text">#}
-{#                        <span class="button__text-inner">Смотреть все</span>#}
-{#                        </span>#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="news-block__content__right-side">#}
-{#                    <div class="news-item big-item">#}
-{#                        <a href="{{ main_blog.get_absolute_url }}" class="item-link"></a>#}
-{#                        <div class="image-block">#}
-{#                            <img src="{{ MEDIA_URL }}{{ main_blog.image1 }}" alt="news-image"#}
-{#                                 class="news-image lazyload">#}
-{#                        </div>#}
-{#                        <div class="descr-block">#}
-{#                            <h3 class="news-title section-title">{{ main_blog.title }}</h3>#}
-{#                            <div class="news-descr section-descr">#}
-{#                                <p>{{ main_blog.description }}</p>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    {% for item in other_blog %}#}
-{#                        <div class="news-item">#}
-{#                            <a href="{{ item.get_absolute_url }}" class="item-link"></a>#}
-{#                            <div class="image-block">#}
-{#                                <img src="{{ MEDIA_URL }}{{ item.image1 }}" alt="news-image"#}
-{#                                     class="news-image lazyload">#}
-{#                            </div>#}
-{#                            <div class="descr-block">#}
-{#                                <h3 class="news-title section-title">{{ item.title }}</h3>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    {% endfor %}#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
-
 
     <div class="js-slider-item backcall-block">
         <div class="container">
