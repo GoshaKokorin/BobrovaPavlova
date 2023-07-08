@@ -521,7 +521,8 @@
 }
 .type-block.black-style {
   background-color: #1e1e1e;
-  color: #fff
+  color: #fff;
+  margin-top: 15px;
 }
 .type-block.black-style .section-title {
   color: #fff
