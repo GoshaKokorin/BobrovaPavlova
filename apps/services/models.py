@@ -2,11 +2,6 @@ from django.db import models
 from django.urls import reverse
 
 
-# TODO: Карточки цен
-# TODO: Галерея
-# TODO: Отображение проектов на главной странице
-
-
 class Services(models.Model):
     title = models.CharField('Название услуги', max_length=255)
     slug = models.SlugField('Не изменять', max_length=255, blank=True, null=True, unique=True)
@@ -71,4 +66,5 @@ class Projects(models.Model):
         verbose_name_plural = 'Проекты'
 
     def get_absolute_url(self):
-        return reverse('services_project', kwargs={'slug_service': self.services_project.slug, 'slug_project': self.slug})
+        return reverse('services_project',
+                       kwargs={'slug_service': self.services_project.slug, 'slug_project': self.slug})

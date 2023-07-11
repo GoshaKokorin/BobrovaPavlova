@@ -34,7 +34,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="type-project wow-js" animation="type_project_2">
                         <a href="{{ architecture_project2.get_absolute_url }}" class="item-link"></a>
                         <div class="image-block">
@@ -43,21 +42,9 @@
                         </div>
                         <div class="descr-block">
                             <h3 class="project-name">{{ architecture_project2.title }}</h3>
-                            <time class="date">{{ architecture_project2.year}}</time>
+                            <time class="date">{{ architecture_project2.year }}</time>
                         </div>
                     </div>
-
-                    <div class="type-project wow-js" animation="type_project_3">
-                        <a href="{{ architecture_project3.get_absolute_url }}" class="item-link"></a>
-                        <div class="image-block">
-                            <img src="{{ MEDIA_URL }}{{ architecture_project3.image1 }}"
-                                 alt="architecture-image" class="item-image lazyload">
-                        </div>
-                        <div class="descr-block">
-                            <h3 class="project-name">{{ architecture_project3.title }}</h3>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -104,72 +91,17 @@
                         </div>
                         <div class="descr-block">
                             <h3 class="project-name">{{ residential_project2.title }}</h3>
-                            <time class="date">{{ residential_project2.year}}</time>
+                            <time class="date">{{ residential_project2.year }}</time>
                         </div>
                     </div>
-
-                    <div class="type-project wow-js" animation="type_project_3">
-                        <a href="{{ residential_project3.get_absolute_url }}" class="item-link"></a>
-                        <div class="image-block">
-                            <img src="{{ MEDIA_URL }}{{ residential_project3.image1 }}"
-                                 alt="architecture-image" class="item-image lazyload">
-                        </div>
-                        <div class="descr-block">
-                            <h3 class="project-name">{{ residential_project3.title }}</h3>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </section>
-    
-
-{#     <section class="js-slider-item news-block">#}
-{#        <div class="container">#}
-{#            <div class="news-block__content wow-js" animation="news_block">#}
-{#                <div class="news-block__content__left-side">#}
-{#                    <h2 class="news-block__title section-title">Новости</h2>#}
-{#                    <a href="{% url 'blog' %}" class="see-all btn-style button">#}
-{#                        <div class="button__filler"></div>#}
-{#                        <span class="button__text">#}
-{#                        <span class="button__text-inner">Смотреть все</span>#}
-{#                        </span>#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="news-block__content__right-side">#}
-{#                    <div class="news-item big-item">#}
-{#                        <a href="{{ main_blog.get_absolute_url }}" class="item-link"></a>#}
-{#                        <div class="image-block">#}
-{#                            <img src="{{ MEDIA_URL }}{{ main_blog.image1 }}" alt="news-image" class="news-image lazyload">#}
-{#                        </div>#}
-{#                        <div class="descr-block">#}
-{#                            <h3 class="news-title section-title">{{ main_blog.title}}</h3>#}
-{#                            <div class="news-descr section-descr">#}
-{#                                <p>{{ main_blog.description }}</p>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    {% for item in other_blog %}#}
-{#                    <div class="news-item">#}
-{#                        <a href="{{ item.get_absolute_url }}" class="item-link"></a>#}
-{#                        <div class="image-block">#}
-{#                            <img src="{{ MEDIA_URL }}{{ item.image1}}" alt="news-image" class="news-image lazyload">#}
-{#                        </div>#}
-{#                        <div class="descr-block">#}
-{#                            <h3 class="news-title section-title">{{ item.title }}</h3>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    {% endfor %}#}
-{##}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
-
     <div class="js-slider-item backcall-block">
         <div class="container">
-            <a href="javascript:void(0);" data-micromodal-trigger="modal_backcall" class="backcall-btn btn-style gray-style button">
+            <a href="javascript:void(0);" data-micromodal-trigger="modal_backcall"
+               class="backcall-btn btn-style gray-style button">
                 <div class="button__filler"></div>
                 <span class="button__text">
                 <span class="button__text-inner"><i class="icon icon-arrow"></i></span>
@@ -189,10 +121,12 @@
                     <header class="modal__header">
                         <h2 class="modal__title">Есть вопрос?</h2>
                         <h3 class="modal__subtitle">Мы готовы связаться с Вами и проконсультировать</h3>
-                        <button class="modal__close" aria-label="Закрыть" data-micromodal-close><i class="icon icon-close"></i></button>
+                        <button class="modal__close" aria-label="Закрыть" data-micromodal-close><i
+                                class="icon icon-close"></i></button>
                     </header>
                     <main class="modal__content">
-                        <form id="backcall_form" class="ajax-form backcall-form" action="" data-modal="modal_backcall" data-success="backcall_ok">
+                        <form id="backcall_form" class="ajax-form backcall-form" action="" data-modal="modal_backcall"
+                              data-success="backcall_ok">
                             {% csrf_token %}
                             <div class="input-group">
                                 <input type="text" class="input-style name-input" name="name" placeholder="Имя*">
@@ -236,10 +170,12 @@
                     <header class="modal__header">
                         <h2 class="modal__title">Пакет <span>Мини</span></h2>
                         <h3 class="modal__subtitle">Укажите Ваши данные. <br> Мы свяжемся с Вами в ближайшее время.</h3>
-                        <button class="modal__close" aria-label="Закрыть" data-micromodal-close><i class="icon icon-close"></i></button>
+                        <button class="modal__close" aria-label="Закрыть" data-micromodal-close><i
+                                class="icon icon-close"></i></button>
                     </header>
                     <main class="modal__content">
-                        <form id="pack_form" class="ajax-form backcall-form" action="" data-modal="modal_pack" data-success="backcall_ok">
+                        <form id="pack_form" class="ajax-form backcall-form" action="" data-modal="modal_pack"
+                              data-success="backcall_ok">
                             {% csrf_token %}
                             <input type="hidden" name="pack">
                             <div class="input-group">
