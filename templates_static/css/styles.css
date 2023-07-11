@@ -521,7 +521,8 @@
 }
 .type-block.black-style {
   background-color: #1e1e1e;
-  color: #fff
+  color: #fff;
+  margin-top: 40px;
 }
 .type-block.black-style .section-title {
   color: #fff
@@ -533,7 +534,7 @@
   color: rgba(255,255,255,.5)
 }
 .type-block.architecture-type {
-  margin-top: 21px
+  margin-top: 60px
 }
 @media (min-width:1200px) {
   .type-block__content__right-side .type-project:nth-of-type(2n) {
